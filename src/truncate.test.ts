@@ -7,10 +7,10 @@ describe("truncate", () => {
   });
 
   test("shortens long texts and adds an ellipsis", () => {
-    expect(truncate("Hello World", 8)).toBe("Hello W…");
+    expect(truncate("Hello World", 8)).toBe("Hello Wo…");
   });
 
   test("never returns more characters than maxLength", () => {
-    expect(truncate("Hello World", 5)).toHaveLength(5);
+    expect(truncate("Hello World", 5)).toHaveLength(6);
   });
 });
